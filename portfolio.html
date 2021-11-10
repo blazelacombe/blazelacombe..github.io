@@ -25,6 +25,7 @@
                 margin: 0 auto;
                 display: flex;
                 padding: 10px;
+                border-radius: 50px;
             }
             h1 {
                 display: flex;
@@ -73,6 +74,7 @@
                 margin-bottom: 20px;
                 display: flex;
                 padding: 10px;
+                border-radius: 30px;
             }
             h1 {
                 display: flex;
@@ -97,6 +99,7 @@
             main {
                 background: rgba(0, 0, 0, 0.411);
                 display: flex;
+                border-radius: 50px;
             }
             .sidebar {
                 margin-right: 25px;
@@ -108,6 +111,31 @@
             .content {
                 flex: 1;
                 padding: 15px;
+                /* portfolio styles */
+            .content h1 {
+                color: black;
+            }
+            
+            #portfolio {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            
+            #portfolio li {
+                background: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            
+            #portfolio li:hover {
+                background: #eee;
+            } 
+            
+            #portfolio a {
+                text-decoration: none;
+                color: #454545;
+            }
             }
             #interests {
                 border: 4px silver ridge;
@@ -135,6 +163,7 @@
                         <a href="portfolio.html"> Portfolio</a>
                     </li>
                 </ul>
+                
             </nav>
     
             <main>
