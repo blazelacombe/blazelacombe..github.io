@@ -10,8 +10,8 @@
         steve: {assetKey: 'steve', points: 5},
         grace: {assetKey: 'grace', points: 5},
         kennedi: {assetKey: 'kennedi', points: 50},
-        spongegar: {assetKey: 'spongegar', points: 400},
-        sans: {assetKey: 'sans', points: 400},
+        spongegar: {assetKey: 'spongegar', points: 210},
+        sans: {assetKey: 'sans', points: 210},
     };
     
     /**
@@ -39,9 +39,7 @@
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
-        createCollectable(type.steve, 15, 170, 6, 0.7);
-        createCollectable(type.max, 650, 500, );
-        createCollectable(type.db, 780, 200, 40, 1)
+       
         createCollectable(type.spongegar, 600, 375)
         createCollectable(type.sans, 250, 145 )
         
