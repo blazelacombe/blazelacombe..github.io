@@ -10,9 +10,9 @@
         steve: {assetKey: 'steve', points: 5},
         grace: {assetKey: 'grace', points: 5},
         kennedi: {assetKey: 'kennedi', points: 50},
-        spongegar: {assetKey: 'spongegar', points: 210},
-        sans: {assetKey: 'sans', points: 210},
-        steam: {assetKey: 'steam', points: 210},
+        spongegar: {assetKey: 'spongegar', points: 205},
+        sans: {assetKey: 'sans', points: 205},
+        steam: {assetKey: 'steam', points: 10},
     };
     
     /**
