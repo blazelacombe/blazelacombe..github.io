@@ -12,6 +12,7 @@
         kennedi: {assetKey: 'kennedi', points: 50},
         spongegar: {assetKey: 'spongegar', points: 210},
         sans: {assetKey: 'sans', points: 210},
+        steam: {assetKey: 'steam', points: 210},
     };
     
     /**
@@ -42,6 +43,7 @@
        
         createCollectable(type.spongegar, 600, 375)
         createCollectable(type.sans, 250, 145 )
+        createCollectable(type.steam, 20, 400)
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////

@@ -15,6 +15,7 @@
         game.load.image('max', './asset/collectable/max-head.png');
         game.load.image('spongegar', './asset/collectable/spongegar.png');
         game.load.image('sans', './asset/collectable/sans.png');
+        game.load.image('steam', './asset/collectable/steam.png');
         game.load.atlas('halle', './asset/halle/phaser-json-array/halle.png', './asset/halle/phaser-json-array/halle.json');
     };
 })(window);
