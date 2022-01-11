@@ -17,6 +17,8 @@
 			left: 200px;  /* <--- Change me! */
 		}
 		.board{
+			background-image: url(images/W8pE6l.png);
+ 			background-color: #cccccc;
 			height: 100vh;
 		}
 	</style>
@@ -68,7 +70,7 @@
 			var positionY = 0
 			var speedY = 5
 			var boardHeight = jQuery(window).height();
-			var randNum = Math.random() * 100;
+			var randNum = Math.random(0,boardWidth) * 100;
 
 
 			
@@ -81,7 +83,7 @@
 				moveBoxTo(positionX + randNum, positionY + randNum);	
 				positionX = positionX + speed;
 				positionY = positionY + speedY;
-				if (positionX > boardWidth){
+				if (positionX > boardWidth ){
 					speed = speed *-1;
 				}
 				if (positionX < 0){
