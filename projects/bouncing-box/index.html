@@ -8,8 +8,9 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: rgb(255, 130, 14);
-			font-size: 300%;
+			background-image: url(images/Bobby\(2\).jpg);
+			background-color: rgb(0, 152, 253);
+			font-size: 250%;
 			text-align: center;
 			display: block;
 			position: absolute;
@@ -66,9 +67,9 @@
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
 			var points = 1;
-			var speed = 5
+			var speed = 2
 			var positionY = 0
-			var speedY = 5
+			var speedY = 2
 			var boardHeight = jQuery(window).height();
 			var randNum = Math.random(0,boardWidth) * 100;
 
@@ -109,8 +110,8 @@
 			positionY = 0;	
 			changeBoxText(points);
 			points = points + 1;
-			speed = speed + 3;
-			speedY = speedY + 3;
+			speed = speed + 1;
+			speedY = speedY + 1;
 
 
 			};
