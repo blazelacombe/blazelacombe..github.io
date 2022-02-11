@@ -20,14 +20,14 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables
-            var circle;
-            var circles = [];
+            var circle; // undefined variable that will hold an individual circle
+            var circles = [];// empty array that will later hold multple circles
         // TODO 2 : Create a function that draws a circle 
         function drawCircle(){
-            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
-            physikz.addRandomVelocity(circle, canvas, 10, 10);
-            view.addChild(circle);
-            circles.push(circle);
+            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2); // calls random circle function, creates a circle
+            physikz.addRandomVelocity(circle, canvas, 10, 10); // adds random velocity
+            view.addChild(circle); // add circle to canvas
+            circles.push(circle); // push method pushes individual circle to circles array
 
 
         }
