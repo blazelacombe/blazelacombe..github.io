@@ -33,11 +33,7 @@ var init = function (window) {
         }
 
         // TODO 3 / 8 : Call the drawCircle() function 
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
+        // REMOVED TO KEEP CODE DRY
 
         for (var Dc = 0; Dc < 100; Dc++){
             drawCircle();
@@ -89,7 +85,7 @@ var init = function (window) {
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
-            
+           
 
 
             // YOUR TODO 7 CODE ENDS HERE //////////////////////////
