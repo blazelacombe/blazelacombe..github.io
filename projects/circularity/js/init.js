@@ -25,7 +25,7 @@ var init = function (window) {
         // TODO 2 : Create a function that draws a circle 
         function drawCircle(){
             circle = draw.randomCircleInArea(canvas, true, true, '#999', 2); // calls random circle function, creates a circle
-            physikz.addRandomVelocity(circle, canvas, 10, 10); // adds random velocity
+            physikz.addRandomVelocity(circle, canvas, 5, 5); // adds random velocity
             view.addChild(circle); // add circle to canvas
             circles.push(circle); // push method pushes individual circle to circles array
 
@@ -33,9 +33,16 @@ var init = function (window) {
         }
 
         // TODO 3 / 8 : Call the drawCircle() function 
-        // REMOVED TO KEEP CODE DRY
+            /*
+            drawCircle();
+            drawCircle();
+            drawCircle();
+            drawCircle();
+            drawCircle();
+            */
 
-        for (var Dc = 0; Dc < 100; Dc++){
+        //
+        for (var Dc = 0; Dc < 500; Dc++){
             drawCircle();
         }
 
@@ -50,12 +57,22 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            // REMOVED TO KEEP CODE DRY
+            /*
+            physikz.updatePosition(circles[0]);
+            physikz.updatePosition(circles[1]);
+            physikz.updatePosition(circles[2]);
+            physikz.updatePosition(circles[3]);
+            physikz.updatePosition(circles[4]);
+            */
+
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-           // REMOVED TO KEEP CODE DRY
-
-           
-
+            /*
+            game.checkCirclePosition(circles[0])
+            game.checkCirclePosition(circles[1])
+            game.checkCirclePosition(circles[2])
+            game.checkCirclePosition(circles[3])
+            game.checkCirclePosition(circles[4])
+            */
             // TODO 9 : Iterate over the array
             for (var j =0; j < circles.length; j++){
                 var eachCircle = circles[j];
