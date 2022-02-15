@@ -39,9 +39,10 @@ var init = function (window) {
             drawCircle();
             drawCircle();
             drawCircle();
+            Calls the circle 5 times thorugh hard coding
             */
 
-        //
+        // tells the code to run 500 times, usiing the drawCircles function
         for (var Dc = 0; Dc < 500; Dc++){
             drawCircle();
         }
@@ -56,7 +57,7 @@ var init = function (window) {
         and check to see if it has drifted off the screen.         
         */
         function update() {
-            // TODO 4 : Update the circle's position //
+            // TODO 4 : Updates the circle's position //
             /*
             physikz.updatePosition(circles[0]);
             physikz.updatePosition(circles[1]);
@@ -66,7 +67,7 @@ var init = function (window) {
             */
 
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-            /*
+            /* Checks the position of the circle, hardcoded
             game.checkCirclePosition(circles[0])
             game.checkCirclePosition(circles[1])
             game.checkCirclePosition(circles[2])
@@ -74,6 +75,7 @@ var init = function (window) {
             game.checkCirclePosition(circles[4])
             */
             // TODO 9 : Iterate over the array
+            // Uses a loop to itterate over array and use the itteration in all the circles generated through the loop
             for (var j =0; j < circles.length; j++){
                 var eachCircle = circles[j];
                 physikz.updatePosition(circles[j]);
@@ -91,6 +93,7 @@ var init = function (window) {
         game.checkCirclePosition = function(circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
+            // Tells the code to reset on the opposite border when reaching a border.
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
             } else if(circle.x < 0){
