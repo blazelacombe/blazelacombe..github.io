@@ -28,9 +28,128 @@ var level01 = function (window) {
         // TODO 6 and on go here
         // BEGIN EDITING YOUR CODE HERE
 
-        
-        
-        
+   
+function createSawBlade (sawX, sawY){
+    
+        var hitZoneSize = 25;
+    var damageFromObstacle = 69;
+    var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+    sawBladeHitZone.x = sawX;
+    sawBladeHitZone.y = sawY;
+    game.addGameItem(sawBladeHitZone); 
+    var obstacleImage = draw.bitmap('img/sawblade.png');
+    obstacleImage.x = -26
+    obstacleImage.y = -26
+    sawBladeHitZone.addChild(obstacleImage);
+    
+    var enemy = game.createGameItem('enemy',25);
+    var redSquare = draw.rect(50,50,'red');
+    redSquare.x = -25;
+    redSquare.y = -25;
+    enemy.addChild(redSquare);
+    enemy.x = 400;
+    enemy.y = groundY-50
+}       
+
+function createMyObstacle(x,y) {
+    
+
+};
+
+    /*
+    var enemy = game.createGameItem('enemy',25);
+    var redSquare = draw.rect(50,50,'red');
+    redSquare.x = -25;
+    redSquare.y = -25;
+    enemy.addChild(redSquare);
+    enemy.x = 800;
+    enemy.y = groundY-50
+    game.addGameItem(enemy);
+    enemy.velocityX = -1;
+    enemy.rotationalVelocity = 10;
+
+
+    enemy.onPlayerCollision = function() {
+    console.log('The enemy has hit Halle');
+    game.changeIntegrity(-10);
+    enemy.fadeOut();
+    
+    };
+    enemy.onProjectileCollision = function() {
+        console.log("Halle has hit the enemy");
+        game.increaseScore(100);
+        enemy.flyTo(1700,50)
+    }
+    */
+
+function createEnemy (x,y){
+
+
+ var enemy = game.createGameItem('enemy',25);
+    var redSquare = draw.rect(50,50,'red');
+    redSquare.x = -25;
+    redSquare.y = -25;
+    enemy.addChild(redSquare);
+    enemy.x = x;
+    enemy.y = y
+    game.addGameItem(enemy);
+    enemy.velocityX = -1;
+    enemy.rotationalVelocity = 10;
+
+
+    enemy.onPlayerCollision = function() {
+    console.log('The enemy has hit Halle');
+    game.changeIntegrity(-10);
+    enemy.fadeOut();
+    
+    };
+    enemy.onProjectileCollision = function() {
+        console.log("Halle has hit the enemy");
+        game.increaseScore(100);
+        enemy.flyTo(1700,50)
+    }
+ return enemy.onPlayerCollision;
+ return enemy.onProjectileCollision;
+}
+
+function createReward(x,y){
+    var reward = game.createGameItem('reward',25);
+    var blueSquare = draw.rect(50,50,'blue');
+    blueSquare.x = -25;
+    blueSquare.y = -25;
+    reward.addChild(blueSquare);
+    reward.x = x;
+    reward.y = y
+    game.addGameItem(reward);
+    reward.velocityX = -1;
+    reward.rotationalVelocity = -5;
+
+
+    reward.onPlayerCollision = function() {
+    console.log('The reward has hit Halle');
+    game.changeIntegrity(30);
+    game.increaseScore(690);
+    reward.fadeOut();
+    
+    }
+  return reward.OnPlayerCollision;
+ 
+
+}
+
+
+createSawBlade(450,450);
+createSawBlade(700, 350);
+createSawBlade(800, 460);
+
+createEnemy(500,400);
+createEnemy(600,400);
+createEnemy(800,400);
+
+createReward(950,400);
+createReward(1150,400);
+createReward(1400,400);
+//createMyObstacle(100,200);
         // DO NOT EDIT CODE BELOW HERE
     }
 };
