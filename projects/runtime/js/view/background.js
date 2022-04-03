@@ -38,7 +38,7 @@ var background = function (window) {
             // TODO: 2 - Part 2
             // this fills the background with a obnoxious yellow
             // you should modify this to suit your game
-            var backgroundFill = draw.rect(canvasWidth,groundY,'orange'); // creates a variable called background fill, and staores a rectangle that acts as our background
+            var backgroundFill = draw.rect(canvasWidth,groundY,'navy'); // creates a variable called background fill, and staores a rectangle that acts as our background
             background.addChild(backgroundFill);// adds the bcakground to the canvas so we can se it
             
             // TODO: 3 - Add a moon and starfield
@@ -51,7 +51,7 @@ var background = function (window) {
 
             }
 
-            var moon = draw.bitmap('img/moon.png');
+            var moon = draw.bitmap('img/BloodMoon.png');
             moon.x = 1600;
             moon.y = 50;
             moon.scaleX = .75;
@@ -65,18 +65,18 @@ var background = function (window) {
             
             
             for(var i=0;i<10;++i) {
-                var buildingHeight = 200 * Math.random(12, 300) + 100;
-                var building = draw.rect(75,buildingHeight,'purple','Black',1);
+                var buildingHeight = 200 ;
+                var building = draw.bitmap('img/Tower.png');
                 building.x = 200*i;
-                building.y = groundY-buildingHeight;
+                building.y = groundY-buildingHeight - 50;
                 background.addChild(building);
                 buildings.push(building);
             }
             
             // TODO 4: Part 1 - Add a tree
-            tree = draw.bitmap('img/tree.png');
+            tree = draw.bitmap('img/BotW_Giant_Column_Render.png');
             tree.x = 1300;
-            tree.y = 250;
+            tree.y = 200;
             background.addChild(tree); 
             tree.scaleX
             tree.scaleY
@@ -92,7 +92,7 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 4: Part 2 - Move the tree!
-            tree.x = tree.x - 0;
+            tree.x = tree.x - .8;
 
             if(tree.x < -200){
                 tree.x = canvasWidth;

@@ -12,13 +12,15 @@ var level01 = function (window) {
         // this data will allow us to define all of the
         // behavior of our game
         var levelData = {
-            "name": "Robot Romp",
+            "name": "Boot-Leg Nintendo",
             "number": 1, 
             "speed": -3,
             "gameItems": [
                 { "type": "sawblade", "x": 400, "y": groundY },
                 { "type": "sawblade", "x": 600, "y": groundY },
                 { "type": "sawblade", "x": 900, "y": groundY },
+                { "type": "enemy", "x": 900, "y": groundY },
+               
             ]
         };
         window.levelData = levelData;
@@ -31,24 +33,34 @@ var level01 = function (window) {
    
 function createSawBlade (sawX, sawY){
     
-        var hitZoneSize = 25;
-    var damageFromObstacle = 69;
-    var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
-    sawBladeHitZone.x = sawX;
-    sawBladeHitZone.y = sawY;
-    game.addGameItem(sawBladeHitZone); 
-    var obstacleImage = draw.bitmap('img/sawblade.png');
-    obstacleImage.x = -26
-    obstacleImage.y = -26
+        var hitZoneSize = 25;// sets the size of the area that collisions will impact
+    var damageFromObstacle = 69;// place holder to contain the value for how much the healthbar decreases on collison
+    var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);// creates the hitzone for the obstacle
+    sawBladeHitZone.x = sawX;// contains the value for where the hitzone will appear on a left to right scale
+    sawBladeHitZone.y = sawY;// contains the vallue for 
+    game.addGameItem(sawBladeHitZone); // pushes this value to the "game" array.
+    var obstacleImage = draw.bitmap('img/download (4).png'); // places an image on the screen 
+    obstacleImage.x = -30 //controls the left and right motion of the image
+    obstacleImage.y = -25//controls the up and down motion of the image
     sawBladeHitZone.addChild(obstacleImage);
     
-    var enemy = game.createGameItem('enemy',25);
-    var redSquare = draw.rect(50,50,'red');
-    redSquare.x = -25;
-    redSquare.y = -25;
-    enemy.addChild(redSquare);
-    enemy.x = 400;
-    enemy.y = groundY-50
+  
+}       
+
+function createSawBlade2 (sawX, sawY){
+    
+    var hitZoneSize = 25;// sets the size of the area that collisions will impact
+var damageFromObstacle = 69;// place holder to contain the value for how much the healthbar decreases on collison
+var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);// creates the hitzone for the obstacle
+sawBladeHitZone.x = sawX;// contains the value for where the hitzone will appear on a left to right scale
+sawBladeHitZone.y = sawY;// contains the vallue for 
+game.addGameItem(sawBladeHitZone); // pushes this value to the "game" array.
+var obstacleImage = draw.bitmap('img/Flying.png'); // places an image on the screen 
+obstacleImage.x = -120 //controls the left and right motion of the image
+obstacleImage.y = -190//controls the up and down motion of the image
+sawBladeHitZone.addChild(obstacleImage);
+
+
 }       
 
 function createMyObstacle(x,y) {
@@ -86,15 +98,15 @@ function createEnemy (x,y){
 
 
  var enemy = game.createGameItem('enemy',25);
-    var redSquare = draw.rect(50,50,'red');
-    redSquare.x = -25;
-    redSquare.y = -25;
+    var redSquare = draw.bitmap('img/eyeball.png');
+    redSquare.x = -90;
+    redSquare.y = -80;
     enemy.addChild(redSquare);
     enemy.x = x;
     enemy.y = y
     game.addGameItem(enemy);
     enemy.velocityX = -1;
-    enemy.rotationalVelocity = 10;
+    enemy.rotationalVelocity = 0;
 
 
     enemy.onPlayerCollision = function() {
@@ -114,15 +126,15 @@ function createEnemy (x,y){
 
 function createReward(x,y){
     var reward = game.createGameItem('reward',25);
-    var blueSquare = draw.rect(50,50,'blue');
-    blueSquare.x = -25;
-    blueSquare.y = -25;
+    var blueSquare = draw.bitmap("img/Heart.png");
+    blueSquare.x = -40;
+    blueSquare.y = -40;
     reward.addChild(blueSquare);
     reward.x = x;
-    reward.y = y
+    reward.y = y;
     game.addGameItem(reward);
     reward.velocityX = -1;
-    reward.rotationalVelocity = -5;
+    reward.rotationalVelocity = 0;
 
 
     reward.onPlayerCollision = function() {
@@ -138,17 +150,42 @@ function createReward(x,y){
 }
 
 
-createSawBlade(450,450);
-createSawBlade(700, 350);
+createSawBlade(450,450);  
 createSawBlade(800, 460);
+createSawBlade(450 + 1600,450);  
+createSawBlade(800 + 1600, 460); 
+createSawBlade(450 + 1800,450);  
+createSawBlade(800 + 100, 460);  
+createSawBlade(800 + 300, 460);  
+createSawBlade(800+ 500, 460);
 
-createEnemy(500,400);
-createEnemy(600,400);
-createEnemy(800,400);
 
-createReward(950,400);
-createReward(1150,400);
-createReward(1400,400);
+
+createSawBlade2(700, 350);  
+createSawBlade2(700 + 800, 350);
+createSawBlade2(700 + 1000, 350);  
+createSawBlade2(700 + 2800, 350);
+createSawBlade2(700, + 1500, 350);  
+createSawBlade2(700 + 3800, 350);
+
+createEnemy(500,430);
+createEnemy(600, 430);
+createEnemy(800,430); 
+createEnemy(1600,430);
+createEnemy(2400,430);
+createEnemy(500,430);
+
+
+createEnemy(500,430);
+createEnemy(600 + 600, 430);
+createEnemy(800+ 600,430);
+createEnemy(1600+ 600,430);
+createEnemy(2400+ 600,430);
+createEnemy(500+ 600,430);
+
+createReward(950,350);
+createReward(1850,350);
+createReward(1400,350);
 //createMyObstacle(100,200);
         // DO NOT EDIT CODE BELOW HERE
     }
