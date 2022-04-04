@@ -25,7 +25,7 @@ var level01 = function (window) {
         };
         window.levelData = levelData;
         // set this to true or false depending on if you want to see hitzones
-        game.setDebugMode(true);
+        game.setDebugMode(false);
 
         // TODO 6 and on go here
         // BEGIN EDITING YOUR CODE HERE
@@ -155,17 +155,17 @@ createSawBlade(800, 460);
 createSawBlade(450 + 1600,450);  
 createSawBlade(800 + 1600, 460); 
 createSawBlade(450 + 1800,450);  
-createSawBlade(800 + 100, 460);  
-createSawBlade(800 + 300, 460);  
-createSawBlade(800+ 500, 460);
+createSawBlade(800 + 200, 460);  
+createSawBlade(800 + 400, 460);  
+createSawBlade(800+ 600, 460);
 
 
 
 createSawBlade2(700, 350);  
-createSawBlade2(700 + 800, 350);
-createSawBlade2(700 + 1000, 350);  
+createSawBlade2(700 + 900, 350);
+createSawBlade2(700 + 1100, 350);  
 createSawBlade2(700 + 2800, 350);
-createSawBlade2(700, + 1500, 350);  
+createSawBlade2(700, + 1700, 350);  
 createSawBlade2(700 + 3800, 350);
 
 createEnemy(500,430);
@@ -183,7 +183,7 @@ createEnemy(1600+ 600,430);
 createEnemy(2400+ 600,430);
 createEnemy(500+ 600,430);
 
-createReward(950,350);
+createReward(1050,350);
 createReward(1850,350);
 createReward(1400,350);
 //createMyObstacle(100,200);

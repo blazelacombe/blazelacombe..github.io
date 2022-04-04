@@ -68,7 +68,7 @@ var background = function (window) {
                 var buildingHeight = 200 ;
                 var building = draw.bitmap('img/Tower.png');
                 building.x = 200*i;
-                building.y = groundY-buildingHeight - 50;
+                building.y = groundY-buildingHeight -80 ;
                 background.addChild(building);
                 buildings.push(building);
             }
@@ -76,7 +76,7 @@ var background = function (window) {
             // TODO 4: Part 1 - Add a tree
             tree = draw.bitmap('img/BotW_Giant_Column_Render.png');
             tree.x = 1300;
-            tree.y = 200;
+            tree.y = 85;
             background.addChild(tree); 
             tree.scaleX
             tree.scaleY
