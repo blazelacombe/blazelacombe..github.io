@@ -64,7 +64,7 @@ var background = function (window) {
             
             
             
-            for(var i=0;i<10;++i) {
+            for(var i=0;i<10;i++) {
                 var buildingHeight = 200 ;
                 var building = draw.bitmap('img/Tower.png');
                 building.x = 200*i;
