@@ -381,8 +381,16 @@ function calculateHighScore() {
   if (score > highScore) {
     sessionStorage.setItem("highScore", score);
     highScore = score;
-    alert("New High Score!");
-  }
+    alert("Well Aren't You Special");
+  } 
+
 
   return highScore;
+
+  
+
+}
+
+if(score === 10){
+  alert("nice");
 }
