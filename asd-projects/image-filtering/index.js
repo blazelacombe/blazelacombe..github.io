@@ -21,7 +21,9 @@ function resetAndRender() {
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
 
-  
+  applyFilter(reddify);
+  applyFilterNoBackground(decreaseBlue);
+  applyFilterNoBackground(increaseGreenByBlue);
 
   // do not change the below line of code
   render($("#display"), image);
@@ -33,17 +35,68 @@ function applyAndRender() {
 
 // TODO 1, 2 & 4: Create the applyFilter function here
 
+function applyFilter(filterFunction){
+  for (var i = 0; i < image.length; i++){
+      for (var j = 0; j < image[i].length; j++){
+        var rgbString = image[i][j];
+        var rgbNumbers = rgbStringToArray(rgbString);
+        filterFunction(rgbNumbers);
+        rgbString = rgbArrayToString(rgbNumbers);
+        image[i][j] = rgbString; 
 
+      }
+  }
+}
+
+
+
+
+ 
 // TODO 7: Create the applyFilterNoBackground function
 
+function applyFilterNoBackground(filterFunction){
+  var BGcolor = image[0][0];
+  for (var i = 0; i < image.length; i++){
+      for (var j = 0; j < image[i].length; j++){
+        if ( image[i][j] !== BGcolor) {
+          var rgbString = image[i][j];
+          var rgbNumbers = rgbStringToArray(rgbString);
+        filterFunction(rgbNumbers);
+        rgbString = rgbArrayToString(rgbNumbers);
+        image[i][j] = rgbString; 
+        
+        }
+        
+        
+
+      }
+  }
+}
 
 // TODO 5: Create the keepInBounds function
+
+function keepInBounds(KIBnum){
+  return KIBnum > 255 ? 255 : KIBnum < 0 ? 0 : KIBnum;
+}
 
 
 // TODO 3: Create reddify function
 
+function reddify(redifArr){
+  redifArr[RED] = 200;
+  }
 
 // TODO 6: Create more filter functions
+
+function decreaseBlue(dbArr){
+  dbArr[BLUE] = keepInBounds(dbArr[BLUE] - 50)
+}
+
+function increaseGreenByBlue(IGBBArr){
+  IGBBArr[BLUE] = keepInBounds(IGBBArr[BLUE] + IGBBArr[GREEN])
+}
+
+
 
 
 // CHALLENGE code goes below here
